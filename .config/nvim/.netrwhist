@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='/home/dormouse/.config/nvim/config'
+let g:netrw_dirhist_9='/home/dormouse/.config/nvim'
+let g:netrw_dirhist_8='/home/dormouse/.config/nvim/config'
+let g:netrw_dirhist_7='/home/dormouse/.config/nvim'
+let g:netrw_dirhist_6='/home/dormouse/.config/nvim/config'
+let g:netrw_dirhist_5='/home/dormouse/.config/nvim'
+let g:netrw_dirhist_4='/home/dormouse/.config/nvim/config'
+let g:netrw_dirhist_3='/home/dormouse/.config/nvim'
+let g:netrw_dirhist_2='/home/dormouse/.config/nvim/config'
+let g:netrw_dirhist_1='/home/dormouse/.config/nvim'
