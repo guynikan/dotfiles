@@ -1,0 +1,37 @@
+[Desktop Entry]
+DefaultProfile=zsh.profile
+
+[DownloadDialog Settings]
+Height 720=494
+Height 768=494
+Width 1280=700
+Width 1366=700
+
+[Favorite Profiles]
+Favorites=zsh.profile
+
+[FileDialogSize]
+Height 768=600
+Width 1366=884
+
+[KFileDialog Settings]
+Recent Files[$e]=8exjvnszti961.png,file:$HOME/Documents/x44vsjppxoa21.jpg,file:$HOME/Documents/ia3dSgH.png,file:$HOME/Documents/1608660895418.jpg,file:$HOME/Documents/77vr5tbukv561.png,file:$HOME/Documents/1609793235860.jpg,file:$HOME/Documents/nl8fczkpsbu31.png,file:$HOME/Documents/3q0xufj26gh01.jpg,file:$HOME/Documents/38x9fdve3cb21.jpg,file:$HOME/Documents/GpL8YO8mkAZ-z5Z1mbRCEW-18M60mIwxH4uzxBO7aVI.png,file:$HOME/Documents/w56r2xk6iuk11.png,file:$HOME/Documents/auj68yxxnat01.png,file:$HOME/Documents/4xbj0plmp2q01.jpg,file:$HOME/Documents/E5IL3EFywIE8YI9PdHNuAE5hSnvXPot9XdxH2OFmFcA.png,file:$HOME/Documents/VGisOF5hIq9H46abdFDPjiqkbIIiTrR6T8QLiRDRQpY.png
+iconViewIconSize=43
+
+[KonsoleWindow]
+RemoveWindowTitleBarAndFrame=true
+ShowMenuBarByDefault=false
+ShowWindowTitleOnTitleBar=true
+
+[MainWindow]
+Height 768=480
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAAAAAoAAAAHgAAAABAAAAAQAAAAIAAAACPwAAAAA
+ToolBarsMovable=Disabled
+Width 1366=640
+Window-Maximized 720x1280=true
+Window-Maximized 768x1366=true
+
+[TabBar]
+NewTabButton=true
+TabBarPosition=Top
