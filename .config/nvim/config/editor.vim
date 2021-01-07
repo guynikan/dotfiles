@@ -98,6 +98,10 @@ set linebreak    "Wrap lines at convenient points
 
 set inccommand=split
 
+" Ultisnips Config
+let g:UltiSnipsExpandTrigger = "<ENTER>"
+let g:UltiSnipsJumpForwardTrigger = "<S-n>"
+
 "======= NerdTree config =============
 "Use the natural Vim navigation keys hjkl to navigate the files.
 "Press o to open the file in a new buffer or open/close directory.
@@ -169,3 +173,4 @@ let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#272835 ctermbg=3
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#292b38 ctermbg=4
+

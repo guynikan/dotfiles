@@ -35,6 +35,11 @@ Plug 'AndrewRadev/tagalong.vim'
 Plug 'alvan/vim-closetag'
 " Indent Guides
 Plug 'nathanaelkane/vim-indent-guides'
+
+" Snippets
+Plug 'SirVer/ultisnips'
+" Plug 'mlaursen/vim-react-snippet'
+Plug 'epilande/vim-react-snippets'
 call plug#end()
 
 " === Theme ===

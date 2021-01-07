@@ -13,15 +13,11 @@
 	/home/dormouse/
 	..
 1609954265
-'z
-	/home/dormouse/.config/vifm
-	..
-1609954265
 
 # Bookmarks:
 
 # TUI:
-al
+ar
 q1
 v2
 ov
@@ -30,15 +26,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/home/dormouse/.config
-	..
-0
-d/home/dormouse
-	..
-0
-d/home
-	..
-0
 d/
 	media
 12
@@ -330,6 +317,15 @@ d/home/dormouse/dotfiles
 d/home/dormouse
 	.zshrc
 28
+d/home/dormouse/.config
+	vifm
+23
+d/home/dormouse/.config/vifm
+	..
+0
+d/home/dormouse/.config
+	plasma-workspace
+1
 d
 
 # Right window history (oldest to newest):
@@ -344,10 +340,11 @@ D/media/dormouse/ACBADE87BADE4E08/Documentos/Estudos/github/React-completo/36-Ro
 2
 D/home/dormouse
 	dotfiles
-10
+1
 D
 
 # Command line history (oldest to newest):
+:qqqqqqqq
 :explore
 :Ex
 :Sex
@@ -358,6 +355,7 @@ D
 :q
 
 # Search history (oldest to newest):
+/vifm
 /Re
 /coc
 /zsh
@@ -373,6 +371,8 @@ pDropbox
 # Directory stack (oldest to newest):
 
 # Trash content:
+t/home/dormouse/.local/share/vifm/Trash/000_test
+	/home/dormouse/test
 
 # State:
 f
