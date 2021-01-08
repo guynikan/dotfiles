@@ -99,8 +99,8 @@ set linebreak    "Wrap lines at convenient points
 set inccommand=split
 
 " Ultisnips Config
-let g:UltiSnipsExpandTrigger = "<ENTER>"
-let g:UltiSnipsJumpForwardTrigger = "<S-n>"
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab-n>"
 
 "======= NerdTree config =============
 "Use the natural Vim navigation keys hjkl to navigate the files.

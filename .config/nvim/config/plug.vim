@@ -53,6 +53,7 @@ colorscheme dracula
 let g:coc_global_extensions = [
 			\'coc-snippets',
 			\'coc-emmet',
+			\'coc-pairs',
 			\'coc-css',
 			\'coc-html',
 			\'coc-highlight',
