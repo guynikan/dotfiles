@@ -100,7 +100,7 @@ set inccommand=split
 
 " Ultisnips Config
 let g:UltiSnipsExpandTrigger = "<tab>"
-let g:UltiSnipsJumpForwardTrigger = "<tab-n>"
+let g:UltiSnipsJumpForwardTrigger = "<C-n>"
 
 "======= NerdTree config =============
 "Use the natural Vim navigation keys hjkl to navigate the files.

@@ -13,11 +13,15 @@
 	/home/dormouse/
 	..
 1609954265
+'z
+	/home/dormouse/.config/vifm
+	..
+1609954265
 
 # Bookmarks:
 
 # TUI:
-ar
+al
 q1
 v2
 ov
@@ -26,24 +30,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/
-	media
-12
-d/media
-	dormouse
-1
-d/media/dormouse
-	ACBADE87BADE4E08
-2
-d/media/dormouse/ACBADE87BADE4E08
-	Documentos
-3
-d/media/dormouse/ACBADE87BADE4E08/Documentos
-	Estudos
-3
-d/media/dormouse/ACBADE87BADE4E08/Documentos/Estudos
-	github
-5
 d/media/dormouse/ACBADE87BADE4E08/Documentos/Estudos/github
 	React-completo
 8
@@ -325,7 +311,25 @@ d/home/dormouse/.config/vifm
 0
 d/home/dormouse/.config
 	plasma-workspace
+4
+d/media/dormouse/ACBADE87BADE4E08/Documentos/Estudos
+	github
+5
+d/media/dormouse/ACBADE87BADE4E08/Documentos/Estudos/github
+	React-completo
+8
+d/media/dormouse/ACBADE87BADE4E08/Documentos/Estudos/github/React-completo
+	36-Router
+25
+d/media/dormouse/ACBADE87BADE4E08/Documentos/Estudos/github/React-completo/36-Router
+	6-Desafio-Router
+6
+d/media/dormouse/ACBADE87BADE4E08/Documentos/Estudos/github/React-completo/36-Router/6-Desafio-Router
+	appreact
 1
+d/media/dormouse/ACBADE87BADE4E08/Documentos/Estudos/github/React-completo/36-Router/6-Desafio-Router/appreact
+	..
+0
 d
 
 # Right window history (oldest to newest):
@@ -340,7 +344,7 @@ D/media/dormouse/ACBADE87BADE4E08/Documentos/Estudos/github/React-completo/36-Ro
 2
 D/home/dormouse
 	dotfiles
-1
+10
 D
 
 # Command line history (oldest to newest):
