@@ -1,23 +1,27 @@
 [Desktop Entry]
-DefaultProfile=zsh.profile
+DefaultProfile=Profile 1.profile
 
 [DownloadDialog Settings]
 Height 720=494
 Height 768=494
+Height 900=494
 Width 1280=700
 Width 1366=700
+Width 1600=700
 
 [Favorite Profiles]
-Favorites=zsh.profile
+Favorites=
 
 [FileDialogSize]
 Height 768=600
 Width 1366=884
 
 [KFileDialog Settings]
-Recent Files[$e]=8exjvnszti961.png,file:$HOME/Documents/Wallpapers/400641.jpg,file:$HOME/Documents/Wallpapers/1001616.jpg,file:$HOME/Documents/Wallpapers/968860.jpg,file:$HOME/Documents/Wallpapers/1018103.jpg,file:$HOME/Documents/Wallpapers/x44vsjppxoa21.jpg,file:$HOME/Documents/Wallpapers/4xbj0plmp2q01.jpg
-Recent URLs[$e]=file:$HOME/Documents/Wallpapers/
+Recent Files[$e]=8exjvnszti961.png,file:$HOME/Pictures/973639.jpg,file:$HOME/Pictures/976690.jpg,file:$HOME/Pictures/988729.jpg,file:$HOME/Pictures/at87nc8juz961.png,file:$HOME/Pictures/4ere72zi72z51.jpg,file:$HOME/Pictures/vv8pczjjg4n51.png,file:$HOME/Pictures/cg6k9wseie761.png,file:$HOME/Pictures/6AwsMN6lQWJ2bXvIvIJh30reylXDISOcba6UvXC0a9M.png
+Recent URLs[$e]=file:$HOME/Pictures/
+detailViewIconSize=0
 iconViewIconSize=43
+listViewIconSize=15
 
 [KonsoleWindow]
 RemoveWindowTitleBarAndFrame=true
@@ -26,15 +30,16 @@ ShowWindowTitleOnTitleBar=true
 
 [MainWindow]
 Height 720=720
-Height 768=748
+Height 768=480
 MenuBar=Disabled
 State=AAAA/wAAAAD9AAAAAAAAAoAAAAHgAAAABAAAAAQAAAAIAAAACPwAAAAA
 ToolBarsMovable=Disabled
 Width 1280=640
-Width 1366=683
+Width 1366=640
 Window-Maximized 1080x1920=true
 Window-Maximized 720x1280=true
 Window-Maximized 768x1366=true
+Window-Maximized 900x1600=true
 
 [TabBar]
 NewTabButton=true

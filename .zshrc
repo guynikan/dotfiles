@@ -127,4 +127,9 @@ zinit light zsh-users/zsh-completions
 
 export NVM_DIR="/home/dormouse/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-alias config='/usr/bin/git --git-dir=/home/dormouse/dotfiles --work-tree=/home/dormouse'
+alias config='/usr/bin/git --git-dir=/home/dormouse/.dotfiles --work-tree=/home/dormouse'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
