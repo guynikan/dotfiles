@@ -8,6 +8,7 @@ set history=1000 "Store lots of :cmdline history
 set number "Line numbers
 set mouse=a
 set nu relativenumber
+set tw=70
 
 syntax on
 
@@ -144,6 +145,7 @@ function! OpenTerminal()
   split term://zsh
   resize 5
 endfunction
+
 " Fuzzy Finder
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 

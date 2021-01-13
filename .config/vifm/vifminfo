@@ -9,6 +9,10 @@
 	/home/dormouse/bin/
 	..
 1610322676
+'e
+	/media/dormouse/022CEABB5A227AAA/Estudos
+	..
+1610380468
 'h
 	/home/dormouse/
 	..
@@ -26,7 +30,97 @@ l2
 r2
 
 # Left window history (oldest to newest):
+d/media/dormouse/022CEABB5A227AAA/Estudos/github/React-completo/37-PropTypes
+	appreact
+1
+d/media/dormouse/022CEABB5A227AAA/Estudos/github/React-completo/37-PropTypes/appreact
+	..
+0
+d/media/dormouse/022CEABB5A227AAA/Estudos/github/React-completo/40-useReducer
+	appreact
+1
+d/media/dormouse/022CEABB5A227AAA/Estudos/github/React-completo/40-useReducer/appreact
+	..
+0
+d/media/dormouse/022CEABB5A227AAA/Estudos/github/React-completo/39-Memo
+	appreact
+1
+d/media/dormouse/022CEABB5A227AAA/Estudos/github/React-completo/39-Memo/appreact
+	..
+0
+d/home/dormouse/.npm
+	_logs
+2
+d/home/dormouse/.npm/_logs
+	2021-01-12T12_58_02_047Z-debug.log
+8
+d/home/dormouse/.config
+	vifm
+19
+d/home/dormouse/.config/vifm
+	..
+0
+d/home/dormouse/Downloads
+	protonmail-bridge_1.5.4-1_amd64.deb
+3
 d/home/dormouse
+	..
+0
+d/home
+	..
+0
+d/
+	media
+11
+d/media
+	dormouse
+1
+d/media/dormouse
+	022CEABB5A227AAA
+1
+d/media/dormouse/022CEABB5A227AAA
+	Estudos
+2
+d/media/dormouse/022CEABB5A227AAA/Estudos
+	github
+1
+d/media/dormouse/022CEABB5A227AAA/Estudos/github
+	..
+0
+d/media/dormouse/022CEABB5A227AAA/Estudos
+	..
+0
+d/media/dormouse/022CEABB5A227AAA
+	Estudos
+2
+d/media/dormouse/022CEABB5A227AAA/Estudos
+	github
+1
+d/media/dormouse/022CEABB5A227AAA/Estudos/github
+	React-completo
+1
+d/media/dormouse/022CEABB5A227AAA/Estudos/github/React-completo
+	36-Router
+32
+d/media/dormouse/022CEABB5A227AAA/Estudos/github/React-completo/36-Router
+	6-Desafio-Router
+6
+d/media/dormouse/022CEABB5A227AAA/Estudos/github/React-completo/36-Router/6-Desafio-Router
+	appreact
+1
+d/media/dormouse/022CEABB5A227AAA/Estudos/github/React-completo/36-Router/6-Desafio-Router/appreact
+	public
+3
+d/media/dormouse/022CEABB5A227AAA/Estudos
+	github
+1
+d/media/dormouse/022CEABB5A227AAA/Estudos/github/React-completo
+	38-Lazy-e-suspense
+32
+d/media/dormouse/022CEABB5A227AAA/Estudos/github/React-completo/38-Lazy-e-suspense
+	appreact
+1
+d/media/dormouse/022CEABB5A227AAA/Estudos/github/React-completo/38-Lazy-e-suspense/appreact
 	..
 0
 d
@@ -35,12 +129,20 @@ d
 D/home/dormouse
 	..
 0
+D/home
+	dormouse
+1
 D
 
 # Command line history (oldest to newest):
 :q
 
 # Search history (oldest to newest):
+/kon
+/konsol
+/vif
+/down
+/router
 
 # Prompt history (oldest to newest):
 
@@ -51,6 +153,8 @@ D
 # Directory stack (oldest to newest):
 
 # Trash content:
+t/media/dormouse/022CEABB5A227AAA/.vifm-Trash-1000/000_github-20210111T044025Z-001.zip
+	/media/dormouse/022CEABB5A227AAA/Estudos/github-20210111T044025Z-001.zip
 
 # State:
 f

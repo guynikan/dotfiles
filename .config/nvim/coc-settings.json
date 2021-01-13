@@ -3,6 +3,8 @@
   "suggest.maxCompleteItemCount": 20,
   "suggest.noselect": false,
   "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "html",
     "javascript",
     "typescript",
     "typescriptreact",

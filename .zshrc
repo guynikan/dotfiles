@@ -68,7 +68,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git jump)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -99,6 +99,12 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 
+export NVM_DIR="/home/dormouse/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+alias config='/usr/bin/git --git-dir=/home/dormouse/.dotfiles --work-tree=/home/dormouse'
+
+alias dirvim='cd /home/dormouse/.config/nvim && nvim'
+
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
     print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
@@ -125,9 +131,6 @@ zinit light zdharma/fast-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 
-export NVM_DIR="/home/dormouse/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-alias config='/usr/bin/git --git-dir=/home/dormouse/.dotfiles --work-tree=/home/dormouse'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

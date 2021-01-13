@@ -33,6 +33,7 @@ Plug 'bagrat/vim-buffet'
 Plug 'AndrewRadev/tagalong.vim'
 " Autoclose HTML tags
 Plug 'alvan/vim-closetag'
+Plug 'jiangmiao/auto-pairs'
 " Indent Guides
 Plug 'nathanaelkane/vim-indent-guides'
 " Snippets
@@ -54,7 +55,7 @@ colorscheme dracula
 let g:coc_global_extensions = [
 			\'coc-snippets',
 			\'coc-emmet',
-			\'coc-pairs',
+		  \'coc-pairs',
 			\'coc-css',
 			\'coc-html',
 			\'coc-highlight',
