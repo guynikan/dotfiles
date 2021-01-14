@@ -101,9 +101,10 @@ source $ZSH/oh-my-zsh.sh
 
 export NVM_DIR="/home/dormouse/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-alias config='/usr/bin/git --git-dir=/home/dormouse/.dotfiles --work-tree=/home/dormouse'
+# alias config='/usr/bin/git --git-dir=/home/dormouse/.dotfiles --work-tree=/home/dormouse'
 
 alias dirvim='cd /home/dormouse/.config/nvim && nvim'
+alias config='lazygit --git-dir=/home/dormouse/.dotfiles --work-tree=/home/dormouse'
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
