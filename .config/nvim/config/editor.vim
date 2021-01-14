@@ -9,17 +9,22 @@ set number "Line numbers
 set mouse=a
 set nu relativenumber
 set tw=70
-set autoread
-set autowrite
-set ignorecase
+set autoread "Reload files changed outside vim
+set ignorecase "Faz o vim ignorar minúsculas e maiúsculas nas buscas
 
+"turn on syntax highlighting
 syntax on
 
-" Thanks Spacemacs
+" =========== Mapping ===========
+" thanks spacemacs
+
 
 let mapleader = " "
 
+" Pesquisa por arquivos
+nnoremap <c-p> :FZF<CR>
 
+" Terminal
 nnoremap <Leader>to :Topen<CR>
 nnoremap <Leader>tn :Tnew<CR>
 nnoremap <Leader>tk :Tkill<CR>
@@ -27,35 +32,37 @@ nnoremap <Leader>tt :Ttoggle<CR>
 nnoremap <Leader>tl :Tls<CR>
 nnoremap <Leader>tc :Tclose<CR>
 
-nnoremap <Leader>rk :call neoterm#close()<CR>
-nnoremap <Leader>rc :call neoterm#clear()<CR>
-nnoremap <Leader>rr :call neoterm#clear() \| call neoterm#exec(['!!', '', ''])<CR>
-
-" Fugitive config
-
-" nmap <leader>gh :diffget //3<CR>
-" nmap <leader>gu :diffget //2<CR>
-" nmap <leader>gs :G<CR>
-" nmap <leader>gc :Gcommit<CR>
-" nmap <leader>gp :Gpush<CR>
+" nnoremap <Leader>rk :call neoterm#close()<CR>
+" nnoremap <Leader>rc :call neoterm#clear()<CR>
+" nnoremap <Leader>rr :call neoterm#clear() \| call neoterm#exec(['!!', '', ''])<CR>
 
 " LazyGit
 nnoremap <silent> <leader>g :LazyGit<CR>
 
+" === Window Manager ===
+
+" Dividir telas
+nmap <leader>sh :sp<CR>
+nmap <leader>sv :vsp<CR>
+
+" Redimensionar telas
+nnoremap <C-Up> <C-w>+
+nnoremap <C-Down> <C-w>-
+nnoremap <C-Left> <C-w><
+nnoremap <C-Right> <C-w>>
+
+" Fecha a janela
 nmap <leader>q :q<CR>
-nmap <leader>s :w<CR>
-nmap <leader>r :so %<CR>
-nmap <leader>c :Commentary<CR>
-nnoremap <leader>n :NERDTreeToggle<CR>
-nnoremap <leader>t :call OpenTerminal()<CR>
+" Fecha todas as janelas
+nmap <leader>qa :qall<CR>
 
+noremap <Tab> :bn<CR>
+noremap <S-Tab> :bp<CR>
+noremap <leader><Tab> :Bw<CR>
+noremap <leader><S-Tab> :Bw!<CR>
+noremap <C-t> :tabnew split<CR>
 
-" Navigation
-" Posso usar em conjunto com :b + n - pra mudar de buffer
-" E posso usar também :bd + n - pra deletar um buffer da lista
-" Preferencialmente usar o buffet
-nnoremap <leader>b :buffers<CR>:<Space>
-nnoremap <leader>w :wincmd w<CR>
+" === Navigation ===
 
 " use alt+hjkl to move between split/vsplit panels
 tnoremap <A-h> <C-\><C-n><C-w>h
@@ -67,19 +74,46 @@ nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
 
+" mostra buffers
+nnoremap <leader>b :buffers<CR>:<Space>
+
+" navegação rápida entre janelas
+nnoremap <leader>w :wincmd w<CR>
+
+" Comenta uma linha
+nmap <leader>c :Commentary<CR>
+
+" Abre o NerdTree
+nnoremap <leader>n :NERDTreeToggle<CR>
+
+
+" === Arquivos ===
+
+" Atualiza o arquivo vim
+nmap <leader>r :so %<CR>
+
+" Salva o documento atual
+nmap <leader>s :w<CR>
+
+" Salva todas as janelas abertas
+nmap <leader>a :wall<CR>
+
+" Move linhas
+nnoremap <C-j> :m .+1<CR>==
+nnoremap <C-k> :m .-2<CR>==
+
+" Desabilita as setas no normal mode
+nmap <up> <nop>
+nmap <down> <nop>
+nmap <left> <nop>
+nmap <right> <nop>
+
 " Buffet config
 
 let g:buffet_always_show_tabline = 0
 let g:buffet_use_devicons = 1
 let g:buffet_tab_icon = '#'
 let g:buffet_powerline_separators = 1
-
-noremap <Tab> :bn<CR>
-noremap <S-Tab> :bp<CR>
-noremap <leader><Tab> :Bw<CR>
-noremap <leader><S-Tab> :Bw!<CR>
-noremap <C-t> :tabnew split<CR>
-
 
 " =========== Turn Off Swap Files ===========
 
@@ -115,11 +149,14 @@ set linebreak    "Wrap lines at convenient points
 
 set inccommand=split
 
+" === Snippets ===
+
 " Ultisnips Config
 let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<C-n>"
 
-"======= NerdTree config =============
+"=== NerdTree config ===
+
 "Use the natural Vim navigation keys hjkl to navigate the files.
 "Press o to open the file in a new buffer or open/close directory.
 "Press t to open the file in a new tab.
@@ -147,7 +184,7 @@ autocmd VimEnter * NERDTree
 " Start NERDTree and put the cursor back in the other window.
 autocmd VimEnter * NERDTree | wincmd p
 
-" ============= Integrated Terminal ===============
+" === Terminal ===
 
 " turn terminal to normal mode with escape
 tnoremap <Esc> <C-\><C-n>
@@ -159,19 +196,18 @@ let g:neoterm_keep_term_open = 1
 let g:neoterm_autoinsert = 1
 let g:neoterm_term_per_tab = 1
 
-" Fuzzy Finder
+" === Fuzzy Finder ===
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
-nnoremap <c-p> :FZF<CR>
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-s': 'split',
   \ 'ctrl-v': 'vsplit'
   \}
 
-" ================ Scrolling ========================
+" === Scrolling ===
 
-set scrolloff=20        "Start scrolling when we're 8 lines away from margins
+set scrolloff=20        "Start scrolling when we're 20 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
 
