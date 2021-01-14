@@ -7,7 +7,6 @@ Plug 'dracula/vim'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 " Git Integration
-Plug 'tpope/vim-fugitive'
 Plug 'kdheepak/lazygit.nvim', { 'branch': 'nvim-v0.4.3' }
 " Initial window
 Plug 'mhinz/vim-startify'
@@ -22,6 +21,8 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 " Search
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+" Syntax highlighting
+Plug 'sheerun/vim-polyglot'
 " JS + JSX
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'yuezk/vim-js'
