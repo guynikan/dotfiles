@@ -8,6 +8,7 @@ Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 " Git Integration
 Plug 'tpope/vim-fugitive'
+Plug 'kdheepak/lazygit.nvim', { 'branch': 'nvim-v0.4.3' }
 " Initial window
 Plug 'mhinz/vim-startify'
 Plug 'terryma/vim-multiple-cursors'
@@ -34,7 +35,7 @@ Plug 'AndrewRadev/tagalong.vim'
 " Autoclose HTML tags
 Plug 'alvan/vim-closetag'
 Plug 'jiangmiao/auto-pairs'
-" Indent Guides
+"Indent Guides
 Plug 'nathanaelkane/vim-indent-guides'
 " Snippets
 Plug 'SirVer/ultisnips'
@@ -42,6 +43,8 @@ Plug 'epilande/vim-react-snippets'
 " autoimport
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'kristijanhusak/vim-js-file-import', {'do': 'npm install' }
+" Integrated Terminal
+Plug 'kassio/neoterm'
 call plug#end()
 
 " === Theme ===

@@ -9,6 +9,9 @@ set number "Line numbers
 set mouse=a
 set nu relativenumber
 set tw=70
+set autoread
+set autowrite
+set ignorecase
 
 syntax on
 
@@ -16,13 +19,28 @@ syntax on
 
 let mapleader = " "
 
+
+nnoremap <Leader>to :Topen<CR>
+nnoremap <Leader>tn :Tnew<CR>
+nnoremap <Leader>tk :Tkill<CR>
+nnoremap <Leader>tt :Ttoggle<CR>
+nnoremap <Leader>tl :Tls<CR>
+nnoremap <Leader>tc :Tclose<CR>
+
+nnoremap <Leader>rk :call neoterm#close()<CR>
+nnoremap <Leader>rc :call neoterm#clear()<CR>
+nnoremap <Leader>rr :call neoterm#clear() \| call neoterm#exec(['!!', '', ''])<CR>
+
 " Fugitive config
 
-nmap <leader>gh :diffget //3<CR>
-nmap <leader>gu :diffget //2<CR>
-nmap <leader>gs :G<CR>
-nmap <leader>gc :Gcommit<CR>
-nmap <leader>gp :Gpush<CR>
+" nmap <leader>gh :diffget //3<CR>
+" nmap <leader>gu :diffget //2<CR>
+" nmap <leader>gs :G<CR>
+" nmap <leader>gc :Gcommit<CR>
+" nmap <leader>gp :Gpush<CR>
+
+" LazyGit
+nnoremap <silent> <leader>g :LazyGit<CR>
 
 nmap <leader>q :q<CR>
 nmap <leader>s :w<CR>
@@ -38,8 +56,6 @@ nnoremap <leader>t :call OpenTerminal()<CR>
 " Preferencialmente usar o buffet
 nnoremap <leader>b :buffers<CR>:<Space>
 nnoremap <leader>w :wincmd w<CR>
-nnoremap <leader>th :tabnext<CR>
-nnoremap <leader>tl :tabprev<CR>
 
 " use alt+hjkl to move between split/vsplit panels
 tnoremap <A-h> <C-\><C-n><C-w>h
@@ -133,18 +149,15 @@ autocmd VimEnter * NERDTree | wincmd p
 
 " ============= Integrated Terminal ===============
 
-" open new split panes to right and below
-set splitright
-set splitbelow
 " turn terminal to normal mode with escape
 tnoremap <Esc> <C-\><C-n>
-" start terminal in insert mode
-au BufEnter * if &buftype == 'terminal' | :startinsert | endif
-" open terminal on ctrl+n
-function! OpenTerminal()
-  split term://zsh
-  resize 5
-endfunction
+
+let g:neoterm_default_mod = 'rightbelow'
+let g:neoterm_autoscroll = 1
+let g:neoterm_size = 5
+let g:neoterm_keep_term_open = 1
+let g:neoterm_autoinsert = 1
+let g:neoterm_term_per_tab = 1
 
 " Fuzzy Finder
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'

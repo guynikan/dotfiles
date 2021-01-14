@@ -121,8 +121,86 @@ d/media/dormouse/022CEABB5A227AAA/Estudos/github/React-completo/38-Lazy-e-suspen
 	appreact
 1
 d/media/dormouse/022CEABB5A227AAA/Estudos/github/React-completo/38-Lazy-e-suspense/appreact
+	public
+2
+d/home/dormouse
+	repos
+11
+d/home/dormouse/repos
 	..
 0
+d/home/dormouse
+	..
+0
+d/home
+	..
+0
+d/
+	media
+11
+d/media
+	dormouse
+1
+d/media/dormouse
+	022CEABB5A227AAA
+1
+d/media/dormouse/022CEABB5A227AAA
+	Estudos
+2
+d/media/dormouse/022CEABB5A227AAA/Estudos
+	github
+1
+d/media/dormouse/022CEABB5A227AAA/Estudos/github
+	React-completo
+1
+d/media/dormouse/022CEABB5A227AAA/Estudos/github/React-completo
+	25-Radio
+20
+d/media/dormouse/022CEABB5A227AAA/Estudos/github/React-completo/25-Radio
+	appreact
+1
+d/media/dormouse/022CEABB5A227AAA/Estudos/github/React-completo/25-Radio/appreact
+	public
+2
+d/media/dormouse/022CEABB5A227AAA/Estudos
+	github
+1
+d/media/dormouse/022CEABB5A227AAA/Estudos/github
+	React-completo
+1
+d/media/dormouse/022CEABB5A227AAA/Estudos/github/React-completo
+	25-Radio
+20
+d/media/dormouse/022CEABB5A227AAA/Estudos/github/React-completo/25-Radio
+	appreact
+1
+d/media/dormouse/022CEABB5A227AAA/Estudos/github/React-completo/25-Radio/appreact
+	src
+3
+d/home/dormouse/.config/nvim
+	plugged
+4
+d/home/dormouse/.config/nvim/plugged
+	tagalong.vim
+8
+d/home/dormouse/.config/nvim
+	plugged
+4
+d/home/dormouse/.config/nvim/plugged
+	nerdtree-git-plugin
+7
+d/home/dormouse/.config/nvim
+	plugged
+4
+d/home/dormouse/.config/nvim/plugged
+	nerdtree-git-plugin
+7
+d/media/dormouse/022CEABB5A227AAA/Estudos/github/React-completo
+	25-Radio
+20
+d/media/dormouse/022CEABB5A227AAA/Estudos/github/React-completo/25-Radio
+	appreact
+1
 d
 
 # Right window history (oldest to newest):
@@ -149,12 +227,17 @@ D
 # Local filter history (oldest to newest):
 
 # Registers:
+""/home/dormouse/.local/share/vifm/Trash/001_rainbow_parentheses.vim
 
 # Directory stack (oldest to newest):
 
 # Trash content:
 t/media/dormouse/022CEABB5A227AAA/.vifm-Trash-1000/000_github-20210111T044025Z-001.zip
 	/media/dormouse/022CEABB5A227AAA/Estudos/github-20210111T044025Z-001.zip
+t/home/dormouse/.local/share/vifm/Trash/000_rainbow
+	/home/dormouse/.config/nvim/plugged/rainbow
+t/home/dormouse/.local/share/vifm/Trash/000_rainbow_parentheses.vim
+	/home/dormouse/.config/nvim/plugged/rainbow_parentheses.vim
 
 # State:
 f
