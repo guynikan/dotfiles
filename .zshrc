@@ -105,6 +105,7 @@ export NVM_DIR="/home/dormouse/.nvm"
 
 alias dirvim='cd /home/dormouse/.config/nvim && nvim'
 alias config='lazygit --git-dir=/home/dormouse/.dotfiles --work-tree=/home/dormouse'
+alias vifm='vifm .'
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then

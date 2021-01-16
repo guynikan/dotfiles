@@ -1,3 +1,4 @@
+source $HOME/repos/vifm_devicons/favicons.vifm
 " vim: filetype=vifm :
 " Sample configuration file for vifm (last updated: 2 June, 2019)
 " You can edit this file by hand.
