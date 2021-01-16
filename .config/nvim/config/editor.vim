@@ -3,21 +3,34 @@
 " http://items.sjbach.com/319/configuring-vim-right
 set hidden
 
-set cursorline "Highlight horizontal line
-set history=1000 "Store lots of :cmdline history
-set number "Line numbers
 set mouse=a
 set nu relativenumber
 set tw=70
-set autoread "Reload files changed outside vim
-set ignorecase "Faz o vim ignorar minúsculas e maiúsculas nas buscas
+set cursorline                                  "Highlight horizontal line
+set history=1000                                "Store lots of :cmdline history
+set number                                      "Line numbers
+set autoread                                    "Reload files changed outside vim
+set ignorecase                                  " searchers are case insensitive...
+set smartcase                                   " ... unless they contain at least one capital letter
+set clipboard=unnamedplus                       "  copy clipboard
 
 "turn on syntax highlighting
 syntax on
 
+" Toggle invisible characters
+set list
+set listchars=""
+set listchars=tab:▸\
+set listchars+=trail:·
+set listchars+=extends:»
+set listchars+=precedes:«
+set listchars+=eol:↲
+
 " =========== Mapping ===========
 " thanks spacemacs
 
+" Limpa seleção de texto
+nmap <C-c> :nohl<CR> :set nospell<CR>
 
 let mapleader = " "
 
@@ -31,7 +44,7 @@ nnoremap <Leader>tk :Tkill<CR>
 nnoremap <Leader>tt :Ttoggle<CR>
 nnoremap <Leader>tl :Tls<CR>
 nnoremap <Leader>tc :Tclose<CR>
-
+nnoremap <Leader>start :T npm start<CR>
 " nnoremap <Leader>rk :call neoterm#close()<CR>
 " nnoremap <Leader>rc :call neoterm#clear()<CR>
 " nnoremap <Leader>rr :call neoterm#clear() \| call neoterm#exec(['!!', '', ''])<CR>
@@ -56,13 +69,15 @@ nmap <leader>q :q<CR>
 " Fecha todas as janelas
 nmap <leader>qa :qall<CR>
 
+
+" === Navigation ===
+
+" Tab Navigation (buffet)
 noremap <Tab> :bn<CR>
 noremap <S-Tab> :bp<CR>
 noremap <leader><Tab> :Bw<CR>
 noremap <leader><S-Tab> :Bw!<CR>
 noremap <C-t> :tabnew split<CR>
-
-" === Navigation ===
 
 " use alt+hjkl to move between split/vsplit panels
 tnoremap <A-h> <C-\><C-n><C-w>h
@@ -85,6 +100,7 @@ nmap <leader>c :Commentary<CR>
 
 " Abre o NerdTree
 nnoremap <leader>n :NERDTreeToggle<CR>
+nnoremap <leader>nf :NERDTreeFind<CR>
 
 
 " === Arquivos ===
@@ -131,9 +147,8 @@ set tabstop=2
 set softtabstop=2
 set linespace=2
 
-" Display tabs and trailing spaces visually
-set list listchars=tab:\ \ ,trail:·
-autocmd BufWritePre * :%s/\s\+$//e
+" set list listchars=tab:\ \ ,trail:·
+" autocmd BufWritePre * :%s/\s\+$//e
 
 set nowrap       "Don't wrap lines
 set linebreak    "Wrap lines at convenient points
@@ -166,20 +181,45 @@ let g:UltiSnipsJumpForwardTrigger = "<C-n>"
 "Press r to refresh the current directory.
 "Press m to launch NERDTree menu inside Vim.
 
+" Automatically change directory and root directory 
 let g:NERDTreeChDirMode=2
+
 let g:nerdtree_tabs_focus_on_files=1
+
 let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
+
+" display hidden files by default
 let g:NERDTreeShowHidden = 1
+
+" Disables display of the "bookmarks' label and 'Press ? for help' text
 let g:NERDTreeMinimalUI = 1
+
 let g:NERDTreeIgnore = []
-let g:NERDTreeStatusline = ''
-let NERDTreeQuitOnOpen=1
+
+" let g:NERDTreeStatusline = ''
+
+let g:NERDTreeQuitOnOpen=1
+
+" automatically remove a buffer when a file is being deleted or
+" renamed via a context menu command
+let g:NERDTreeAutoDeleteBuffer = 1
+
+" Tells the NERDTree to display line numbers
+let g:NERDTreeShowLineNumbers = 1
+" let g:NERDTreeStatusLine = 1
+
+
+" make sure relative line numbers are used
+autocmd FileType nerdtree setlocal relativenumber
+
+
+ 
 " Exit Vim if NERDTree is the only window left.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
     \ quit | endif
 
-" Start NERDTree and leave the cursor in it.
-autocmd VimEnter * NERDTree
+autocmd BufWinEnter * silent NERDTreeMirror
+
 
 " Start NERDTree and put the cursor back in the other window.
 autocmd VimEnter * NERDTree | wincmd p

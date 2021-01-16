@@ -36,6 +36,7 @@ Plug 'AndrewRadev/tagalong.vim'
 " Autoclose HTML tags
 Plug 'alvan/vim-closetag'
 Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-surround'
 "Indent Guides
 Plug 'nathanaelkane/vim-indent-guides'
 " Snippets
