@@ -103,9 +103,17 @@ export NVM_DIR="/home/dormouse/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 # alias config='/usr/bin/git --git-dir=/home/dormouse/.dotfiles --work-tree=/home/dormouse'
 
+# abre o dir do nvim no nvim (inception carai)
 alias dirvim='cd /home/dormouse/.config/nvim && nvim'
+# abre os dotfiles no lazygit
 alias config='lazygit --git-dir=/home/dormouse/.dotfiles --work-tree=/home/dormouse'
+# abre o vifm diretamente no dir atual ao invés do dir raiz
 alias vifm='vifm .'
+# Exibe a listagem em já formatada: exibe o tipo de arquivo, arquivos
+# ocultos e em linguagem humana
+alias ls='ls -Flha'
+# exibe o nome do arquivo antes de eliminá-lo 
+alias rm='rm -iv'
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
