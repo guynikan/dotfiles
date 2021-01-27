@@ -14,6 +14,15 @@ set ignorecase                                  " searchers are case insensitive
 set smartcase                                   " ... unless they contain at least one capital letter
 set clipboard=unnamedplus                       "  copy clipboard
 
+" Make double-<Esc> clear search highlights
+nnoremap <silent> <esc><esc> <esc>:nohlsearch<cr><esc>
+
+
+
+
+let g:htl_css_templates = 1
+" let g:htl_all_templates = 1
+
 "turn on syntax highlighting
 syntax on
 
@@ -247,11 +256,11 @@ let g:fzf_action = {
 
 " === Scrolling ===
 
-set scrolloff=20        "Start scrolling when we're 20 lines away from margins
-set sidescrolloff=15
-set sidescroll=1
+ set scrolloff=20        "Start scrolling when we're 20 lines away from margins
+ set sidescrolloff=15
+ set sidescroll=1
 
-
+" 
 " Configure tagalong
 let g:tagalong_verbose = 1
 let g:tagalong_additional_filetypes = ['html', 'xml', 'jsx', 'eruby', 'ejs', 'eco', 'php', 'htmldjango', 'javascriptreact', 'typescriptreact', 'javascript']
