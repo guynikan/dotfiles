@@ -21,11 +21,15 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 " Search
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'jremmen/vim-ripgrep', {'commit': 'da940c29ac97dcb025696491c422b6d8545e3e10'}
 " Syntax highlighting
+Plug 'styled-components/vim-styled-components', {'branch': 'develop'}
 Plug 'sheerun/vim-polyglot'
+Plug 'mileszs/ack.vim'
 " JS + JSX
-Plug 'maxmellon/vim-jsx-pretty'
 Plug 'yuezk/vim-js'
+" CSS
+Plug 'hail2u/vim-css3-syntax' 
 " JS syntax highlighting and indentation
 Plug 'pangloss/vim-javascript'
 Plug 'tpope/vim-commentary'

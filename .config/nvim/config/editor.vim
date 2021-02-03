@@ -14,14 +14,8 @@ set ignorecase                                  " searchers are case insensitive
 set smartcase                                   " ... unless they contain at least one capital letter
 set clipboard=unnamedplus                       "  copy clipboard
 
-" Make double-<Esc> clear search highlights
-nnoremap <silent> <esc><esc> <esc>:nohlsearch<cr><esc>
-
-
-
 
 let g:htl_css_templates = 1
-" let g:htl_all_templates = 1
 
 "turn on syntax highlighting
 syntax on
@@ -36,15 +30,46 @@ set listchars+=precedes:«
 set listchars+=eol:↲
 
 " =========== Mapping ===========
-" thanks spacemacs
+
+" Make double-<Esc> clear search highlights
+nnoremap <silent> <esc><esc> <esc>:nohlsearch<cr><esc>
 
 " Limpa seleção de texto
 nmap <C-c> :nohl<CR> :set nospell<CR>
 
+" thanks spacemacs
 let mapleader = " "
 
 " Pesquisa por arquivos
 nnoremap <c-p> :FZF<CR>
+map <C-o> :Rg 
+
+
+" ack.vim --- {{{
+
+" Use ripgrep for searching ⚡️
+" Options include:
+" --vimgrep -> Needed to parse the rg response properly for ack.vim
+" --type-not sql -> Avoid huge sql file dumps as it slows down the search
+" --smart-case -> Search case insensitive if all lowercase pattern, Search case sensitively otherwise
+let g:ackprg = 'rg --vimgrep --type-not sql --smart-case'
+
+" Auto close the Quickfix list after pressing '' on a list item
+let g:ack_autoclose = 1
+
+" Any empty ack search will search for the work the cursor is on
+let g:ack_use_cword_for_empty_search = 1
+
+" Don't jump to first match
+cnoreabbrev Ack Ack!
+
+" Maps / so we're ready to type the search keyword
+nnoremap <C-p> :Ack! 
+" }}}
+
+" Navigate quickfix list with ease
+nnoremap  [q :cprevious
+nnoremap  ]q :cnext
 
 " Terminal
 nnoremap <Leader>to :Topen<CR>
@@ -78,12 +103,12 @@ nmap <leader>q :q<CR>
 " Fecha todas as janelas
 nmap <leader>qa :qall<CR>
 
-
 " === Navigation ===
 
 " Tab Navigation (buffet)
 noremap <Tab> :bn<CR>
 noremap <S-Tab> :bp<CR>
+" fecha a tab
 noremap <leader><Tab> :Bw<CR>
 noremap <leader><S-Tab> :Bw!<CR>
 noremap <C-t> :tabnew split<CR>
@@ -97,9 +122,6 @@ nnoremap <A-h> <C-w>h
 nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
-
-" mostra buffers
-nnoremap <leader>b :buffers<CR>:<Space>
 
 " navegação rápida entre janelas
 nnoremap <leader>w :wincmd w<CR>
