@@ -131,6 +131,7 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -173,9 +174,9 @@ no_focus [class="plasmashell" window_type="notification"]
 
 # tiles borders color
 # class                 border  backgr. text    indicator child_border
-client.focused          #bd2115 #bd2115 #bd2115 #bd2115   #bd2115
-client.focused_inactive #333333 #4f676a #ffffff #333333   #333333
-client.unfocused        #333333 #222222 #888888 #292d2e   #333333
+client.focused          #FC1D78 #FC1D78 #FC1D78 #FC1D78   #FC1D78
+client.focused_inactive #483C6C #4f676a #ffffff #483C6C   #483C6C
+client.unfocused        #483C6C #222222 #888888 #292d2e   #483C6C
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
@@ -185,7 +186,7 @@ for_window [instance="systemsettings5"] floating enable
 
 
 # Display Wallpaper
-exec_always feh --bg-fill /home/dormouse/Pictures/at87nc8juz961.png
+exec_always feh --bg-fill /home/dormouse/Pictures/837267.jpg
 
 # gaps 
 for_window [class="^.*"] border pixel 4
