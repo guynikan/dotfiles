@@ -1,6 +1,4 @@
-call plug#begin()
-" Themes
-Plug 'megantiu/true.vim'
+call plug#begin() " Themes Plug 'megantiu/true.vim'
 Plug 'morhetz/gruvbox'
 Plug 'dracula/vim'
 " Statusbar
@@ -18,6 +16,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'szw/vim-maximizer'
 " Search
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -26,6 +25,9 @@ Plug 'jremmen/vim-ripgrep', {'commit': 'da940c29ac97dcb025696491c422b6d8545e3e10
 Plug 'styled-components/vim-styled-components', {'branch': 'develop'}
 Plug 'sheerun/vim-polyglot'
 Plug 'mileszs/ack.vim'
+Plug 'tpope/vim-markdown'
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'posva/vim-vue'
 " JS + JSX
 Plug 'yuezk/vim-js'
 " CSS
@@ -51,6 +53,8 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'kristijanhusak/vim-js-file-import', {'do': 'npm install' }
 " Integrated Terminal
 Plug 'kassio/neoterm'
+" Debug
+Plug 'puremourning/vimspector'
 call plug#end()
 
 " === Theme ===
@@ -59,7 +63,10 @@ if(has ("termguicolors"))
 	set termguicolors
 endif
 syntax enable
+let g:dracula_colorterm = 0
 colorscheme dracula
+
+
 " coc config
 let g:coc_global_extensions = [
 			\'coc-snippets',
@@ -71,6 +78,7 @@ let g:coc_global_extensions = [
 			\'coc-tsserver',
 			\'coc-eslint',
 			\'coc-prettier',
+			\'coc-pyright',
 			\'coc-json',
 			\]
 
