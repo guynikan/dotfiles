@@ -8,7 +8,7 @@ ZSH_THEME="agnoster"
 
 DISABLE_UPDATE_PROMPT="true"
 
-
+TERMINAL=alacritty
 # enable command auto-correction.
 ENABLE_CORRECTION="true"
 
