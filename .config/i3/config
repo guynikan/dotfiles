@@ -32,7 +32,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -186,7 +186,10 @@ for_window [instance="systemsettings5"] floating enable
 
 
 # Display Wallpaper
-exec_always feh --bg-fill /home/dormouse/Pictures/837267.jpg
+exec_always feh --bg-fill /home/dormouse/Pictures/dc98o2whlzg61.jpg
+
+# Start compton
+exec --no-startup-id compton
 
 # gaps 
 for_window [class="^.*"] border pixel 4
