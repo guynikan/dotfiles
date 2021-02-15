@@ -29,6 +29,10 @@ set listchars+=extends:»
 set listchars+=precedes:«
 set listchars+=eol:↲
 
+" Avoid showing trailing whitespace when in insert mode
+autocmd InsertEnter * set listchars-=trail:·
+autocmd InsertLeave * set listchars+=trail:·
+
 " =========== Mapping ===========
 
 " Make double-<Esc> clear search highlights
@@ -64,7 +68,7 @@ let g:ack_use_cword_for_empty_search = 1
 cnoreabbrev Ack Ack!
 
 " Maps / so we're ready to type the search keyword
-nnoremap <C-p> :Ack! 
+nnoremap <C-f> :Ack! 
 " }}}
 
 " Navigate quickfix list with ease
@@ -78,7 +82,7 @@ nnoremap <Leader>tk :Tkill<CR>
 nnoremap <Leader>tt :Ttoggle<CR>
 nnoremap <Leader>tl :Tls<CR>
 nnoremap <Leader>tc :Tclose<CR>
-nnoremap <Leader>start :T npm start<CR>
+nnoremap <Leader>dev :T npx vite --open<CR>
 " nnoremap <Leader>rk :call neoterm#close()<CR>
 " nnoremap <Leader>rc :call neoterm#clear()<CR>
 " nnoremap <Leader>rr :call neoterm#clear() \| call neoterm#exec(['!!', '', ''])<CR>
@@ -87,6 +91,9 @@ nnoremap <Leader>start :T npm start<CR>
 nnoremap <silent> <leader>g :LazyGit<CR>
 
 " === Window Manager ===
+
+" Fullscreen
+nmap <leader>f :MaximizerToggle
 
 " Dividir telas
 nmap <leader>sh :sp<CR>
@@ -296,3 +303,17 @@ let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#272835 ctermbg=3
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#292b38 ctermbg=4
 
+
+" enable Markdown folding
+let g:markdown_fenced_languages = ['rb=ruby', 'ruby=ruby', 'erb=eruby', 'js=javascript', 'html=html', 'xml=xml', 'sql=sql']
+
+
+" Debug
+nnoremap <F5> :call vimspector#Continue()<CR>
+nnoremap <F4> :call vimspector#Reset()<CR>
+nnoremap <F9> :call vimspector#ToggleBreakpoint()<CR>
+nnoremap <F10> :call vimspector#StepOver()<CR>
+nnoremap <F11> :call vimspector#StepInto()<CR>
+nnoremap <F12> :call vimspector#StepOut()<CR>
+
+packadd! vimspector
