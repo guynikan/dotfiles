@@ -1,0 +1,70 @@
+{
+    "border": "pixel",
+    "current_border_width": 4,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 441,
+       "width": 1366,
+       "x": 0,
+       "y": 440
+    },
+    "name": "zettelkasten - Obsidian v0.10.11",
+    "percent": 0.6,
+    "swallows": [
+       {
+        "class": "^obsidian$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "percent": 0.4,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 4,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 708,
+               "width": 801,
+               "x": 23,
+               "y": 57
+            },
+            "name": "Google Keep - Brave",
+            "percent": 0.533333333333333,
+            "swallows": [
+               {
+                "class": "^Brave\\-browser$",
+                "title": "^Google\\ Keep\\ \\-\\ Brave$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "pixel",
+            "current_border_width": 4,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 708,
+               "width": 664,
+               "x": 699,
+               "y": 57
+            },
+            "name": "New Tab - Brave",
+            "percent": 0.383333333333333,
+            "swallows": [
+               {
+                "class": "^Brave\\-browser$",
+                "title": "^New\\ Tab\\ \\-\\ Brave$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
