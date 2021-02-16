@@ -67,7 +67,7 @@ let g:ack_use_cword_for_empty_search = 1
 " Don't jump to first match
 cnoreabbrev Ack Ack!
 
-" Maps / so we're ready to type the search keyword
+" Maps so we're ready to type the search keyword
 nnoremap <C-f> :Ack! 
 " }}}
 
@@ -107,6 +107,7 @@ nnoremap <C-Right> <C-w>>
 
 " Fecha a janela
 nmap <leader>q :q<CR>
+
 " Fecha todas as janelas
 nmap <leader>qa :qall<CR>
 
@@ -298,10 +299,10 @@ let g:tagalong_additional_filetypes = ['html', 'xml', 'jsx', 'eruby', 'ejs', 'ec
 let g:closetag_filetypes = 'javascript, jsx, javascriptreact, html,xhtml, phtml'
 
 " Config Indent Guides
-let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#272835 ctermbg=3
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#292b38 ctermbg=4
+" let g:indent_guides_enable_on_vim_startup = 1
+" let g:indent_guides_auto_colors = 0
+" autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#272835 ctermbg=3
+" autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#292b38 ctermbg=4
 
 
 " enable Markdown folding
