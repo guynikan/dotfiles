@@ -20,6 +20,14 @@ let g:htl_css_templates = 1
 "turn on syntax highlighting
 syntax on
 
+let g:vue_pre_processors = 'detect_on_enter'
+
+" Gotta go fast
+set ttyfast
+set lazyredraw
+
+autocmd BufRead,BufNewFile *.html,*.css,*.js setlocal shiftwidth=2 softtabstop=2
+
 " Toggle invisible characters
 set list
 set listchars=""
@@ -32,6 +40,7 @@ set listchars+=eol:↲
 " Avoid showing trailing whitespace when in insert mode
 autocmd InsertEnter * set listchars-=trail:·
 autocmd InsertLeave * set listchars+=trail:·
+
 
 " =========== Mapping ===========
 
@@ -93,7 +102,7 @@ nnoremap <silent> <leader>g :LazyGit<CR>
 " === Window Manager ===
 
 " Fullscreen
-nmap <leader>f :MaximizerToggle
+nmap <leader>f :MaximizerToggle<CR>
 
 " Dividir telas
 nmap <leader>sh :sp<CR>
@@ -263,6 +272,31 @@ autocmd BufWinEnter * silent NERDTreeMirror
 " Start NERDTree and put the cursor back in the other window.
 autocmd VimEnter * NERDTree | wincmd p
 
+" NERDTress File highlighting
+function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
+exec 'autocmd FileType nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
+exec 'autocmd FileType nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
+endfunction
+
+call NERDTreeHighlightFile('jade', 'green', 'none', 'green', '#151515')
+call NERDTreeHighlightFile('ini', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('md', 'blue', 'none', '#3366FF', '#151515')
+call NERDTreeHighlightFile('yml', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('config', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('conf', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('json', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('html', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('styl', 'cyan', 'none', 'cyan', '#151515')
+call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
+call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
+call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
+call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
+call NERDTreeHighlightFile('ds_store', 'Gray', 'none', '#686868', '#151515')
+call NERDTreeHighlightFile('gitconfig', 'Gray', 'none', '#686868', '#151515')
+call NERDTreeHighlightFile('gitignore', 'Gray', 'none', '#686868', '#151515')
+call NERDTreeHighlightFile('bashrc', 'Gray', 'none', '#686868', '#151515')
+call NERDTreeHighlightFile('bashprofile', 'Gray', 'none', '#686868', '#151515')
+
 " === Terminal ===
 
 " turn terminal to normal mode with escape
@@ -317,4 +351,5 @@ nnoremap <F10> :call vimspector#StepOver()<CR>
 nnoremap <F11> :call vimspector#StepInto()<CR>
 nnoremap <F12> :call vimspector#StepOut()<CR>
 
-packadd! vimspector
+" packadd! vimspector
+

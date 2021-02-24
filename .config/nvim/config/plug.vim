@@ -1,6 +1,8 @@
 call plug#begin() " Themes Plug 'megantiu/true.vim'
 Plug 'morhetz/gruvbox'
 Plug 'dracula/vim'
+" Cool surrounding character coloring
+Plug 'junegunn/rainbow_parentheses.vim'
 " Statusbar
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -22,12 +24,12 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'jremmen/vim-ripgrep', {'commit': 'da940c29ac97dcb025696491c422b6d8545e3e10'}
 " Syntax highlighting
+Plug 'posva/vim-vue'
 Plug 'styled-components/vim-styled-components', {'branch': 'develop'}
 Plug 'sheerun/vim-polyglot'
 Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-markdown'
 Plug 'cakebaker/scss-syntax.vim'
-Plug 'posva/vim-vue'
 " JS + JSX
 Plug 'yuezk/vim-js'
 " CSS
@@ -62,7 +64,6 @@ call plug#end()
 if(has ("termguicolors"))
 	set termguicolors
 endif
-syntax enable
 let g:dracula_colorterm = 0
 colorscheme dracula
 
@@ -74,6 +75,8 @@ let g:coc_global_extensions = [
 		  \'coc-pairs',
 			\'coc-css',
 			\'coc-html',
+			\'coc-vetur',
+			\'coc-html-css-support',
 			\'coc-highlight',
 			\'coc-tsserver',
 			\'coc-eslint',
