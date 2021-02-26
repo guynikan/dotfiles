@@ -12,7 +12,8 @@ Plug 'kdheepak/lazygit.nvim', { 'branch': 'nvim-v0.4.3' }
 Plug 'mhinz/vim-startify'
 Plug 'terryma/vim-multiple-cursors'
 " Auto-completion
-Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+" Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Navigation
 Plug 'scrooloose/nerdtree'
 Plug 'xuyuanp/nerdtree-git-plugin'
