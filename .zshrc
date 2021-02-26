@@ -2,7 +2,8 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/dormouse/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
+
 
 ZSH_THEME="spaceship"
 
@@ -82,6 +83,9 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='nvim'
 # fi
+#
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -92,22 +96,14 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 alias zshconfig="nvim ~/.zshrc"
 # abre o dir do nvim no nvim (inception carai)
-alias dirvim='cd /home/dormouse/.config/nvim && nvim'
+alias dirvim='cd $HOME/.config/nvim && nvim'
 # abre o dotfiles no lazygit
-alias config='lazygit --git-dir=/home/dormouse/.dotfiles --work-tree=/home/dormouse'
+alias config='lazygit --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 # Exibe a listagem já formatada: exibe o tipo de arquivo, arquivos
 # ocultos e em linguagem humana
 alias lss='ls -Flhac'
 # exibe o nome do arquivo antes de eliminá-lo 
 alias rm='rm -iv'
 
-export NVM_DIR="/home/dormouse/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# alias config='/usr/bin/git --git-dir=/home/dormouse/.dotfiles --work-tree=/home/dormouse'
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-fpath=($fpath "/home/dormouse/.zfunctions")
-
-  # Set Spaceship ZSH as a prompt
-  autoload -U promptinit; promptinit
-  prompt spaceship
+# alias config='/usr/bin/git --git-dir=/home/edb/.dotfiles/ --work-tree=/home/edb'
