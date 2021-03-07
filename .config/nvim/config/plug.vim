@@ -1,6 +1,7 @@
 call plug#begin() " Themes Plug 'megantiu/true.vim'
 Plug 'morhetz/gruvbox'
 Plug 'dracula/vim'
+
 " Cool surrounding character coloring
 Plug 'junegunn/rainbow_parentheses.vim'
 " Statusbar
@@ -10,9 +11,9 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'kdheepak/lazygit.nvim', { 'branch': 'nvim-v0.4.3' }
 " Initial window
 Plug 'mhinz/vim-startify'
+
 Plug 'terryma/vim-multiple-cursors'
 " Auto-completion
-" Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Navigation
 Plug 'scrooloose/nerdtree'
@@ -37,27 +38,27 @@ Plug 'yuezk/vim-js'
 Plug 'hail2u/vim-css3-syntax' 
 " JS syntax highlighting and indentation
 Plug 'pangloss/vim-javascript'
-Plug 'tpope/vim-commentary'
+Plug 'preservim/nerdcommenter'
 " Turn buffer into tabs
 Plug 'bagrat/vim-buffet'
-" auto rename closing tags
+" Auto rename closing tags
 Plug 'AndrewRadev/tagalong.vim'
 " Autoclose HTML tags
 Plug 'alvan/vim-closetag'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 "Indent Guides
-Plug 'nathanaelkane/vim-indent-guides'
+Plug 'Yggdroot/indentLine'
 " Snippets
 Plug 'SirVer/ultisnips'
 Plug 'epilande/vim-react-snippets'
-" autoimport
-Plug 'ludovicchabant/vim-gutentags'
+" Autoimport
 Plug 'kristijanhusak/vim-js-file-import', {'do': 'npm install' }
 " Integrated Terminal
 Plug 'kassio/neoterm'
 " Debug
 Plug 'puremourning/vimspector'
+
 call plug#end()
 
 " === Theme ===
@@ -67,7 +68,6 @@ if(has ("termguicolors"))
 endif
 let g:dracula_colorterm = 0
 colorscheme dracula
-
 
 " coc config
 let g:coc_global_extensions = [

@@ -13,12 +13,13 @@ set autoread                                    "Reload files changed outside vi
 set ignorecase                                  " searchers are case insensitive...
 set smartcase                                   " ... unless they contain at least one capital letter
 set clipboard=unnamedplus                       "  copy clipboard
-
-
-let g:htl_css_templates = 1
+set suffixesadd=.js,.jsx                        " look for files without extension in gf
+set path=.,src,node_modules
 
 "turn on syntax highlighting
 syntax on
+
+"let g:htl_css_templates = 1
 
 let g:vue_pre_processors = 'detect_on_enter'
 
@@ -57,9 +58,7 @@ let mapleader = " "
 nnoremap <c-p> :FZF<CR>
 map <C-o> :Rg 
 
-
 " ack.vim --- {{{
-
 " Use ripgrep for searching ⚡️
 " Options include:
 " --vimgrep -> Needed to parse the rg response properly for ack.vim
@@ -92,9 +91,6 @@ nnoremap <Leader>tt :Ttoggle<CR>
 nnoremap <Leader>tl :Tls<CR>
 nnoremap <Leader>tc :Tclose<CR>
 nnoremap <Leader>dev :T npx vite --open<CR>
-" nnoremap <Leader>rk :call neoterm#close()<CR>
-" nnoremap <Leader>rc :call neoterm#clear()<CR>
-" nnoremap <Leader>rr :call neoterm#clear() \| call neoterm#exec(['!!', '', ''])<CR>
 
 " LazyGit
 nnoremap <silent> <leader>g :LazyGit<CR>
@@ -143,12 +139,30 @@ nnoremap <A-l> <C-w>l
 " navegação rápida entre janelas
 nnoremap <leader>w :wincmd w<CR>
 
-" Comenta uma linha
-nmap <leader>c :Commentary<CR>
-
 " Abre o NerdTree
 nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>nf :NERDTreeFind<CR>
+
+let g:ft = ''
+    fu! NERDCommenter_before()
+        if &ft == 'vue'
+            let g:ft = 'vue'
+            let stack = synstack(line('.'), col('.'))
+            if len(stack) > 0
+                let syn = synIDattr((stack)[0], 'name')
+                if len(syn) > 0
+                    let syn = tolower(syn)
+                    exe 'setf '.syn
+                endif
+            endif
+        endif
+    endfu
+    fu! NERDCommenter_after()
+        if g:ft == 'vue'
+            setf vue
+            let g:ft = ''
+        endif
+    endfu
 
 
 " === Arquivos ===
@@ -333,9 +347,11 @@ let g:tagalong_additional_filetypes = ['html', 'xml', 'jsx', 'eruby', 'ejs', 'ec
 let g:closetag_filetypes = 'javascript, jsx, javascriptreact, html,xhtml, phtml'
 
 " Config Indent Guides
+" let g:indent_guides_guide_size = 1
+" let g:indent_guides_start_level = 2
 " let g:indent_guides_enable_on_vim_startup = 1
 " let g:indent_guides_auto_colors = 0
-" autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#272835 ctermbg=3
+" autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#252525 ctermbg=3
 " autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#292b38 ctermbg=4
 
 
