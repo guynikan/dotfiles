@@ -32,7 +32,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec konsole
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -186,10 +186,13 @@ for_window [instance="systemsettings5"] floating enable
 
 
 # Display Wallpaper
-exec_always feh --bg-fill /home/dormouse/Pictures/dc98o2whlzg61.jpg
+exec_always feh --bg-fill /home/edb/Pictures/Enwb6ueXUAEzJ6I.jpeg
 
 # Start compton
 exec --no-startup-id compton
+
+# Start Albert
+exec_always albert 
 
 # gaps 
 for_window [class="^.*"] border pixel 4
@@ -198,4 +201,4 @@ gaps outer  5
 
 bindsym $mod+r mode "resize"
 
-exec_always --no-startup-id $HOME/.config/polybar/forest/launch.sh
+# exec_always --no-startup-id $HOME/.config/polybar/forest/launch.sh

@@ -12,6 +12,7 @@ SPACESHIP_PROMPT_ORDER=(
   dir           # Current directory section
   host          # Hostname section
   git           # Git section (git_branch + git_status)
+  docker        # Docker section
   hg            # Mercurial section (hg_branch  + hg_status)
   exec_time     # Execution time
   line_sep      # Line break
@@ -24,10 +25,12 @@ SPACESHIP_USER_SHOW=always
 SPACESHIP_PROMPT_ADD_NEWLINE=false
 SPACESHIP_CHAR_SYMBOL="❯"
 SPACESHIP_CHAR_SUFFIX=" "
+SPACESHIP_PROMPT_SEPARATE_LINE=true
+
 
 DISABLE_UPDATE_PROMPT="true"
 
-TERMINAL=alacritty
+TERMINAL=konsole
 # enable command auto-correction.
 ENABLE_CORRECTION="true"
 
@@ -99,6 +102,7 @@ alias zshconfig="nvim ~/.zshrc"
 alias dirvim='cd $HOME/.config/nvim && nvim'
 # abre o dotfiles no lazygit
 alias config='lazygit --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+#alias config='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 # Exibe a listagem já formatada: exibe o tipo de arquivo, arquivos
 # ocultos e em linguagem humana
 alias lss='ls -Flhac'

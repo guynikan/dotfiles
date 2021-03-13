@@ -30,17 +30,16 @@ ShowWindowTitleOnTitleBar=true
 
 [MainWindow]
 Height 720=720
-Height 768=768
-Height 900=900
+Height 768=706
+Height 900=874
 MenuBar=Disabled
 State=AAAA/wAAAAD9AAAAAAAAAoAAAAHgAAAABAAAAAQAAAAIAAAACPwAAAAA
 ToolBarsMovable=Disabled
 Width 1280=640
-Width 1366=683
-Width 1600=800
+Width 1366=1340
+Width 1600=1574
 Window-Maximized 1080x1920=true
 Window-Maximized 720x1280=true
-Window-Maximized 768x1366=true
 
 [TabBar]
 NewTabButton=true
