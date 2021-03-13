@@ -11,8 +11,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'kdheepak/lazygit.nvim', { 'branch': 'nvim-v0.4.3' }
 " Initial window
 Plug 'mhinz/vim-startify'
-
-Plug 'terryma/vim-multiple-cursors'
+" Linting
+Plug 'dense-analysis/ale'
 " Auto-completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Navigation

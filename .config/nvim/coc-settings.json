@@ -13,15 +13,7 @@
     "javascriptreact",
     "typescript.tsx"
   ],
-  "eslint.filetypes": [
-    "javascript",
-    "typescript",
-    "typescriptreact",
-    "javascriptreact",
-    "typescript.tsx"
-  ],
   "coc.preferences.colorSupport": true,
-  "prettier.eslintIntegration": true,
   "diagnostic.errorSign": "•",
   "diagnostic.warningSign": "•",
   "diagnostic.infoSign": "•",
