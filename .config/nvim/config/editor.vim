@@ -1,25 +1,30 @@
-syntax on                                       "turn on syntax highlighting
+" See more typing :options
+syntax on                    "turn on syntax highlighting
 
-set hidden                                      "allow vim to manage multiple buffers
 set mouse=a
+set hidden                   "allow vim to manage multiple buffers
 set nu relativenumber
 set tw=70
-set cursorline                                  "Highlight horizontal line
-set history=1000                                "Store lots of :cmdline history
-set number                                      "Line numbers
-set autoread                                    "Reload files changed outside vim
-set ignorecase                                  " searchers are case insensitive...
-set smartcase                                   " ... unless they contain at least one capital letter
-set clipboard=unnamedplus                       "  copy clipboard
-set suffixesadd=.js,.jsx                        " look for files without extension in gf
-set path=.,src,node_modules
+set cursorline               "Highlight horizontal line
+set history=1000             "Store lots of :cmdline history
+set number                   "Line numbers
+set autoread                 "Reload files changed outside vim
+set ignorecase               " searchers are case insensitive...
+set smartcase                " ... unless they contain at least one capital letter
+set clipboard=unnamedplus    "  copy clipboard
+set suffixesadd=.js,.jsx     " look for files without extension in gf
+set path=.,src,node_modules  " a list of dirs which will be searched when using the gf
+set showcmd                  "display an incomplete command in the lower right corner
+set colorcolumn=80           "set a bar in 80's colorcolumn
 
-" === Turn Off Swap Files ===
+"=== Turn Off Swap Files ===
 set noswapfile
 set nobackup
 set nowb
 
 " === Indentation ===
+
+" Use the indent of the previous line for a newly created line
 set autoindent
 set smartindent
 

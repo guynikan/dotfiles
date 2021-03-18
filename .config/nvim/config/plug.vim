@@ -68,6 +68,8 @@ if(has ("termguicolors"))
 endif
 let g:dracula_colorterm = 0
 colorscheme dracula
+highlight Normal guibg=none
+
 
 " coc config
 let g:coc_global_extensions = [
