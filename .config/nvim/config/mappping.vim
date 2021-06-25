@@ -12,6 +12,9 @@ let mapleader = " "
 " Pesquisa por arquivos
 nnoremap <c-p> :FZF<CR>
 
+" Git Blame
+nnoremap <Leader>b :<C-u>call gitblame#echo()<CR>
+
 " ack.vim --- {{{
 " Use ripgrep for searching ⚡️
 " Options include:
@@ -45,9 +48,9 @@ nnoremap <Leader>tt :Ttoggle<CR>
 nnoremap <Leader>tl :Tls<CR>
 nnoremap <Leader>tc :Tclose<CR>
 
-"nnoremap <Leader>dev :T npx vite --open<CR>
+nnoremap <Leader>up :T docker-compose -f docker-compose-dev.yml up<CR>
 
-nnoremap <silent> <C-s> :MultipleCursorsFind <C-R>
+nnoremap <Leader>down :T docker-compose -f docker-compose-dev.yml down<CR>
 
 " LazyGit
 nnoremap <silent> <leader>g :LazyGit<CR>
@@ -72,6 +75,10 @@ nmap <leader>q :q<CR>
 
 " Fecha todas as janelas
 nmap <leader>qa :qall<CR>
+
+" Move to the next lint error
+nmap <silent> <C-e> <Plug>(ale_next_wrap)
+nmap <silent> <leader>mm <Plug>(ale_detail)
 
 " === Navigation ===
 
