@@ -2,20 +2,19 @@
   "suggest.echodocSupport": true,
   "suggest.maxCompleteItemCount": 20,
   "suggest.noselect": false,
-  "coc.preferences.formatOnSaveFiletypes": [
-    "scss",
-    "css",
-    "html",
-    "javascript",
-    "typescript",
-    "typescriptreact",
-    "json",
-    "javascriptreact",
-    "typescript.tsx"
-  ],
+  "vetur.format.enable": false,
+  "html.format.enable": false,
+  //"coc.preferences.formatOnSaveFiletypes": [
+    //"scss",
+    //"css",
+    //"html",
+    //"javascript",
+    //"typescript",
+    //"typescriptreact",
+    //"json",
+    //"javascriptreact",
+    //"typescript.tsx"
+  //],
   "coc.preferences.colorSupport": true,
-  "diagnostic.errorSign": "•",
-  "diagnostic.warningSign": "•",
-  "diagnostic.infoSign": "•",
   "pairs.enableCharacters": ["(", "[", "{", "'", "\"", "`"]
 }
