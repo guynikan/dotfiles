@@ -32,7 +32,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec konsole
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -172,12 +172,14 @@ for_window [class="(?i)*nextcloud*"] floating disable
 for_window [class="plasmashell" window_type="notification"] floating enable, border none, move right 700px, move down 450px
 no_focus [class="plasmashell" window_type="notification"] 
 
+for_window [class="plasmashell" window_type="notification"] floating enable, border none, move position 1010px 50px
+
 # tiles borders color
 # class                 border  backgr. text    indicator child_border
-client.focused          #FC1D78 #FC1D78 #FC1D78 #FC1D78   #FC1D78
-client.focused_inactive #483C6C #4f676a #ffffff #483C6C   #483C6C
-client.unfocused        #483C6C #222222 #888888 #292d2e   #483C6C
-client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.focused          #d79921 #d79921 #d79921 #d79921   #d79921
+client.focused_inactive #504945 #504945 #ffffff #504945   #504945
+client.unfocused        #504945 #222222 #888888 #292d2e   #504945
+client.urgent           #2f343a #cc241d #ffffff #cc241d   #cc241d
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 client.background       #ffffff
@@ -186,7 +188,7 @@ for_window [instance="systemsettings5"] floating enable
 
 
 # Display Wallpaper
-exec_always feh --bg-fill /home/edb/Pictures/Enwb6ueXUAEzJ6I.jpeg
+exec_always feh --bg-fill /home/edb/Pictures/gawjfhvbi2x61.jpg
 
 # Start compton
 exec --no-startup-id compton
@@ -195,7 +197,7 @@ exec --no-startup-id compton
 exec_always albert 
 
 # gaps 
-for_window [class="^.*"] border pixel 4
+for_window [class="^.*"] border pixel 3
 gaps inner  5
 gaps outer  5
 
