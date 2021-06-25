@@ -9,6 +9,7 @@ Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 " Git Integration
 Plug 'kdheepak/lazygit.nvim', { 'branch': 'nvim-v0.4.3' }
+Plug 'zivyangll/git-blame.vim'
 " Initial window
 Plug 'mhinz/vim-startify'
 " Linting
@@ -50,8 +51,8 @@ Plug 'tpope/vim-surround'
 "Indent Guides
 Plug 'Yggdroot/indentLine'
 " Snippets
-Plug 'SirVer/ultisnips'
-Plug 'epilande/vim-react-snippets'
+"Plug 'SirVer/ultisnips'
+"Plug 'epilande/vim-react-snippets'
 " Autoimport
 Plug 'kristijanhusak/vim-js-file-import', {'do': 'npm install' }
 " Integrated Terminal
@@ -66,8 +67,8 @@ call plug#end()
 if(has ("termguicolors"))
 	set termguicolors
 endif
-let g:dracula_colorterm = 0
-colorscheme dracula
+"let g:dracula_colorterm = 0
+colorscheme gruvbox
 highlight Normal guibg=none
 
 
@@ -81,13 +82,9 @@ let g:coc_global_extensions = [
 			\'coc-vetur',
 			\'coc-html-css-support',
 			\'coc-highlight',
-			\'coc-tsserver',
-			\'coc-eslint',
-			\'coc-prettier',
 			\'coc-pyright',
 			\'coc-json',
 			\]
-
 
 " Note: Make sure the function is defined before `vim-buffet` is loaded.
 function! g:BuffetSetCustomColors()
