@@ -101,8 +101,8 @@ alias zshconfig="nvim ~/.zshrc"
 # abre o dir do nvim no nvim (inception carai)
 alias dirvim='cd $HOME/.config/nvim && nvim'
 # abre o dotfiles no lazygit
-alias config='lazygit --git-dir=$HOME/.dotfiles --work-tree=$HOME'
-#alias config='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+alias clg='lazygit --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+alias config='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 # Exibe a listagem já formatada: exibe o tipo de arquivo, arquivos
 # ocultos e em linguagem humana
 alias lss='ls -Flhac'
