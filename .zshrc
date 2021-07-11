@@ -61,7 +61,6 @@ plugins=(
 	colored-man-pages 
 	command-not-found 
 	copydir 
-	zsh-autosuggestions
 	vi-mode
 	web-search
 )
