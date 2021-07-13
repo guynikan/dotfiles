@@ -35,6 +35,8 @@ cnoreabbrev Ack Ack!
 " Maps so we're ready to type the search keyword
 nnoremap <C-f> :Ack! 
 " }}}
+"
+vnoremap <leader>d "_d
 
 " Navigate quickfix list with ease
 nnoremap  [q :cprevious

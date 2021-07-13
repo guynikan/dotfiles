@@ -15,14 +15,16 @@ let g:ale_floating_preview = 1
 let g:ale_linters = {
             \'vue': ['eslint'],
             \'javascript': ['eslint'],
-            \'html': ['eslint']
+            \'html': ['eslint'],
+            \'json': ['eslint']
             \}
 
 "" Fix files with prettier, and then ESLint.
 let g:ale_fixers = {
     \'vue': ['prettier'],
     \'javascript': ['prettier'],
-    \'html': ['prettier']
+    \'html': ['prettier'],
+    \'json': ['prettier']
     \}
 
 " For airline integration

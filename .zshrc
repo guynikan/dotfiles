@@ -8,6 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="spaceship"
 
 SPACESHIP_PROMPT_ORDER=(
+  time 
   user          # Username section
   dir           # Current directory section
   host          # Hostname section
@@ -101,8 +102,8 @@ alias zshconfig="nvim ~/.zshrc"
 # abre o dir do nvim no nvim (inception carai)
 alias dirvim='cd $HOME/.config/nvim && nvim'
 # abre o dotfiles no lazygit
-alias config='lazygit --git-dir=$HOME/.dotfiles --work-tree=$HOME'
-#alias config='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+alias clg='lazygit --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+alias config='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 # Exibe a listagem já formatada: exibe o tipo de arquivo, arquivos
 # ocultos e em linguagem humana
 alias lss='ls -Flhac'
@@ -111,3 +112,4 @@ alias rm='rm -iv'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # alias config='/usr/bin/git --git-dir=/home/edb/.dotfiles/ --work-tree=/home/edb'
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
