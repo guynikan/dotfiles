@@ -67,8 +67,8 @@ call plug#end()
 if(has ("termguicolors"))
 	set termguicolors
 endif
-"let g:dracula_colorterm = 0
-colorscheme gruvbox
+let g:dracula_colorterm = 0
+colorscheme dracula
 highlight Normal guibg=none
 
 
