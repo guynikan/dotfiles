@@ -12,7 +12,6 @@ SPACESHIP_PROMPT_ORDER=(
   dir           # Current directory section
   host          # Hostname section
   git           # Git section (git_branch + git_status)
-  docker        # Docker section
   hg            # Mercurial section (hg_branch  + hg_status)
   exec_time     # Execution time
   line_sep      # Line break
@@ -56,7 +55,8 @@ HIST_STAMPS="mm/dd/yyyy"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 	git 
-	jump 
+ zsh-docker-aliases	
+ jump 
 	npm 
 	colored-man-pages 
 	command-not-found 
