@@ -2,6 +2,10 @@ call plug#begin() " Themes Plug 'megantiu/true.vim'
 Plug 'morhetz/gruvbox'
 Plug 'dracula/vim'
 
+Plug 'ms-jpq/chadtree'
+
+Plug 'chmp/mdnav'
+
 " Cool surrounding character coloring
 Plug 'junegunn/rainbow_parentheses.vim'
 " Statusbar
@@ -67,6 +71,7 @@ call plug#end()
 if(has ("termguicolors"))
 	set termguicolors
 endif
+
 let g:dracula_colorterm = 0
 colorscheme dracula
 highlight Normal guibg=none

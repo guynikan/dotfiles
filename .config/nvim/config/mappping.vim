@@ -105,8 +105,8 @@ nnoremap <A-l> <C-w>l
 nnoremap <leader>w :wincmd w<CR>
 
 " Abre o NerdTree
-nnoremap <leader>n :NERDTreeToggle<CR>
-nnoremap <leader>nf :NERDTreeFind<CR>
+"nnoremap <leader>n :NERDTreeToggle<CR>
+nnoremap <leader>n :CHADopen<CR>
 
 " === Arquivos ===
 

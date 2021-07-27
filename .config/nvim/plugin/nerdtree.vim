@@ -21,6 +21,7 @@ let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
 " display hidden files by default
 let g:NERDTreeShowHidden = 1
 
+
 " Disables display of the "bookmarks' label and 'Press ? for help' text
 let g:NERDTreeMinimalUI = 1
 
@@ -39,11 +40,11 @@ let g:NERDTreeShowLineNumbers = 1
 autocmd FileType nerdtree setlocal relativenumber
 
 " Exit Vim if NERDTree is the only window left.
-autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
-    \ quit | endif
+"autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
+    "\ quit | endif
 
-autocmd BufWinEnter * silent NERDTreeMirror
+"autocmd BufWinEnter * silent NERDTreeMirror
 
 " Start NERDTree and put the cursor back in the other window.
-autocmd VimEnter * NERDTree | wincmd p
+"autocmd VimEnter * CHADopen | wincmd p
 
