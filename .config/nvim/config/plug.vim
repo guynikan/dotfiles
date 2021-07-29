@@ -2,9 +2,26 @@ call plug#begin() " Themes Plug 'megantiu/true.vim'
 Plug 'morhetz/gruvbox'
 Plug 'dracula/vim'
 
+" File tree
 Plug 'ms-jpq/chadtree'
 
+" MD preview
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+
+Plug 'vimwiki/vimwiki'
+
+" MD navigation
 Plug 'chmp/mdnav'
+
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'neovim/nvim-lspconfig'
+Plug 'kabouzeid/nvim-lspinstall'
+Plug 'glepnir/lspsaga.nvim'
+Plug 'hrsh7th/nvim-compe'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 
 " Cool surrounding character coloring
 Plug 'junegunn/rainbow_parentheses.vim'
@@ -18,34 +35,11 @@ Plug 'zivyangll/git-blame.vim'
 Plug 'mhinz/vim-startify'
 " Linting
 Plug 'dense-analysis/ale'
-" Auto-completion
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" Navigation
-Plug 'scrooloose/nerdtree'
-Plug 'xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'szw/vim-maximizer'
-" Search
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-Plug 'jremmen/vim-ripgrep', {'commit': 'da940c29ac97dcb025696491c422b6d8545e3e10'}
-" Syntax highlighting
-Plug 'posva/vim-vue'
-Plug 'styled-components/vim-styled-components', {'branch': 'develop'}
-Plug 'sheerun/vim-polyglot'
-Plug 'mileszs/ack.vim'
-Plug 'tpope/vim-markdown'
-Plug 'cakebaker/scss-syntax.vim'
-" JS + JSX
-Plug 'yuezk/vim-js'
-" CSS
-Plug 'hail2u/vim-css3-syntax' 
-" JS syntax highlighting and indentation
-Plug 'pangloss/vim-javascript'
 Plug 'preservim/nerdcommenter'
 " Turn buffer into tabs
-Plug 'bagrat/vim-buffet'
+"Plug 'bagrat/vim-buffet'
 " Auto rename closing tags
 Plug 'AndrewRadev/tagalong.vim'
 " Autoclose HTML tags
@@ -55,10 +49,6 @@ Plug 'tpope/vim-surround'
 "Indent Guides
 Plug 'Yggdroot/indentLine'
 " Snippets
-"Plug 'SirVer/ultisnips'
-"Plug 'epilande/vim-react-snippets'
-" Autoimport
-Plug 'kristijanhusak/vim-js-file-import', {'do': 'npm install' }
 " Integrated Terminal
 Plug 'kassio/neoterm'
 " Debug
@@ -91,9 +81,9 @@ let g:coc_global_extensions = [
 			\'coc-json',
 			\]
 
-" Note: Make sure the function is defined before `vim-buffet` is loaded.
-function! g:BuffetSetCustomColors()
-  hi! BuffetCurrentBuffer cterm=NONE ctermbg=5 ctermfg=8 guibg=#6272a4 guifg=#f8f8f2
-	hi! BuffetBuffer cterm=NONE ctermbg=5 ctermfg=8 guibg=#44475a guifg=#f8f8f2
-	hi! BuffetTab cterm=NONE ctermbg=5 ctermfg=8 guibg=#44475a guifg=#f8f8f2
-endfunction
+"" Note: Make sure the function is defined before `vim-buffet` is loaded.
+"function! g:BuffetSetCustomColors()
+  "hi! BuffetCurrentBuffer cterm=NONE ctermbg=5 ctermfg=8 guibg=#6272a4 guifg=#f8f8f2
+	"hi! BuffetBuffer cterm=NONE ctermbg=5 ctermfg=8 guibg=#44475a guifg=#f8f8f2
+	"hi! BuffetTab cterm=NONE ctermbg=5 ctermfg=8 guibg=#44475a guifg=#f8f8f2
+"endfunction

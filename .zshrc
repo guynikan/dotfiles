@@ -108,6 +108,7 @@ alias config='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias lss='ls -Flhac'
 # exibe o nome do arquivo antes de eliminá-lo 
 alias rm='rm -iv'
+alias lg="lazygit"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # alias config='/usr/bin/git --git-dir=/home/edb/.dotfiles/ --work-tree=/home/edb'
