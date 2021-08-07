@@ -160,4 +160,7 @@ let g:vimwiki_list = [wiki]
 let g:vimwiki_dir_link = ''
 " Only treat .md files under a path in vimwiki_list as wiki files
 let g:vimwiki_global_ext = 0
+" Disable folding in md url's
+let g:indentLine_setConceal = 0
 
+"let g:vimwiki_listsyms = '✗○◐●✓'
