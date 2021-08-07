@@ -9,6 +9,9 @@ nmap <C-c> :nohl<CR> :set nospell<CR>
 " Thanks spacemacs
 let mapleader = " "
 
+nnoremap <Leader>p :lua require'clipboard-image.paste'.paste_img{ img_dir = 'vimwiki/img' }<CR>
+
+
 nnoremap <Leader>vpi :PlugInstall<CR>
 nnoremap <Leader>vpc :PlugClean<CR>
 
@@ -40,26 +43,25 @@ nnoremap <Leader>' :lua require'telescope.builtin'.marks{}<CR>
 "nnoremap <Leader>gf :lua require'telescope.builtin'.git_files{}<CR>
 
 " all files
-nnoremap <C-p> :lua require'telescope.builtin'.find_files{}<CR>
+nnoremap <C-p> :lua require'telescope.builtin'.find_files{hidden = true}<CR>
 
 " ripgrep like grep through dir
 nnoremap <C-f> :lua require'telescope.builtin'.live_grep{}<CR>
 
 " === Lsp key bindings ===
-nnoremap <silent> gd    <cmd>lua vim.lsp.buf.definition()<CR>
-nnoremap <silent> <C-]> <cmd>lua vim.lsp.buf.definition()<CR>
-nnoremap <silent> gD    <cmd>lua vim.lsp.buf.declaration()<CR>
-nnoremap <silent> gr    <cmd>lua vim.lsp.buf.references()<CR>
-nnoremap <silent> gi    <cmd>lua vim.lsp.buf.implementation()<CR>
-nnoremap <silent> K     <cmd>Lspsaga hover_doc<CR>
-nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
-"nnoremap <silent> <C-p> <cmd>Lspsaga diagnostic_jump_prev<CR>
-nnoremap <silent> <C-n> <cmd>Lspsaga diagnostic_jump_next<CR>
-nnoremap <silent> gf    <cmd>lua vim.lsp.buf.formatting()<CR>
-nnoremap <silent> gn    <cmd>lua vim.lsp.buf.rename()<CR>
-nnoremap <silent> ga    <cmd>Lspsaga code_action<CR>
-xnoremap <silent> ga    <cmd>Lspsaga range_code_action<CR>
-nnoremap <silent> gs    <cmd>Lspsaga signature_help<CR>
+nnoremap <Leader> gd    <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <Leader> gD    <cmd>lua vim.lsp.buf.declaration()<CR>
+nnoremap <Leader> gr    <cmd>lua vim.lsp.buf.references()<CR>
+nnoremap <Leader> gi    <cmd>lua vim.lsp.buf.implementation()<CR>
+nnoremap <Leader> K     <cmd>Lspsaga hover_doc<CR>
+nnoremap <Leader> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
+"nnoremap Leadert> <C-p> <cmd>Lspsaga diagnostic_jump_prev<CR>
+nnoremap <Leader> <C-n> <cmd>Lspsaga diagnostic_jump_next<CR>
+nnoremap <Leader> gf    <cmd>lua vim.lsp.buf.formatting()<CR>
+nnoremap <Leader> gn    <cmd>lua vim.lsp.buf.rename()<CR>
+nnoremap <Leader> ga    <cmd>Lspsaga code_action<CR>
+xnoremap <Leader> ga    <cmd>Lspsaga range_code_action<CR>
+nnoremap <Leader> gs    <cmd>Lspsaga signature_help<CR>
 
 
 " ack.vim --- {{{
@@ -153,7 +155,7 @@ nnoremap <leader>n :CHADopen<CR>
 " === Arquivos ===
 
 " Atualiza o arquivo vim
-nmap <leader>r :so %<CR>
+nmap <leader>r :so $MYVIMRC<CR>
 
 " Salva o documento atual
 nmap <leader>s :w<CR>
