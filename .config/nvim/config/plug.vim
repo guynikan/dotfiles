@@ -2,6 +2,10 @@ call plug#begin() " Themes Plug 'megantiu/true.vim'
 Plug 'morhetz/gruvbox'
 Plug 'dracula/vim'
 
+Plug 'ekickx/clipboard-image.nvim'
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax' 
+
 " File tree
 Plug 'ms-jpq/chadtree'
 
@@ -9,9 +13,6 @@ Plug 'ms-jpq/chadtree'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
 Plug 'vimwiki/vimwiki'
-
-" MD navigation
-Plug 'chmp/mdnav'
 
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/popup.nvim'
@@ -80,10 +81,3 @@ let g:coc_global_extensions = [
 			\'coc-pyright',
 			\'coc-json',
 			\]
-
-"" Note: Make sure the function is defined before `vim-buffet` is loaded.
-"function! g:BuffetSetCustomColors()
-  "hi! BuffetCurrentBuffer cterm=NONE ctermbg=5 ctermfg=8 guibg=#6272a4 guifg=#f8f8f2
-	"hi! BuffetBuffer cterm=NONE ctermbg=5 ctermfg=8 guibg=#44475a guifg=#f8f8f2
-	"hi! BuffetTab cterm=NONE ctermbg=5 ctermfg=8 guibg=#44475a guifg=#f8f8f2
-"endfunction

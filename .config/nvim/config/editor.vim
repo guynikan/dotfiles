@@ -137,7 +137,7 @@ let g:ft = ''
     endfu
 
 " auto start on enter in md buffer
-let g:mkdp_auto_start = 1
+"let g:mkdp_auto_start = 1
 let g:mkdp_refresh_show = 1
 
 let wiki = {
