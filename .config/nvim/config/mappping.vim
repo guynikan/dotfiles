@@ -9,8 +9,10 @@ nmap <C-c> :nohl<CR> :set nospell<CR>
 " Thanks spacemacs
 let mapleader = " "
 
-nnoremap <Leader>p :lua require'clipboard-image.paste'.paste_img{ img_dir = 'vimwiki/img' }<CR>
-
+autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>
+" there are some defaults for image directory and image name, you can change them
+" let g:mdip_imgdir = 'img'
+" let g:mdip_imgname = 'image'
 
 nnoremap <Leader>vpi :PlugInstall<CR>
 nnoremap <Leader>vpc :PlugClean<CR>
