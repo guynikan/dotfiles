@@ -2,9 +2,15 @@ call plug#begin() " Themes Plug 'megantiu/true.vim'
 Plug 'morhetz/gruvbox'
 Plug 'dracula/vim'
 
-Plug 'ekickx/clipboard-image.nvim'
-Plug 'vim-pandoc/vim-pandoc'
-Plug 'vim-pandoc/vim-pandoc-syntax' 
+Plug 'ferrine/md-img-paste.vim'
+"Plug 'vim-pandoc/vim-pandoc'
+"Plug 'vim-pandoc/vim-pandoc-syntax' 
+
+" tabular plugin is used to format tables
+Plug 'godlygeek/tabular'
+" JSON front matter highlight plugin
+Plug 'elzr/vim-json'
+Plug 'plasticboy/vim-markdown'
 
 " File tree
 Plug 'ms-jpq/chadtree'
@@ -39,8 +45,6 @@ Plug 'dense-analysis/ale'
 Plug 'ryanoasis/vim-devicons'
 Plug 'szw/vim-maximizer'
 Plug 'preservim/nerdcommenter'
-" Turn buffer into tabs
-"Plug 'bagrat/vim-buffet'
 " Auto rename closing tags
 Plug 'AndrewRadev/tagalong.vim'
 " Autoclose HTML tags
@@ -49,7 +53,6 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 "Indent Guides
 Plug 'Yggdroot/indentLine'
-" Snippets
 " Integrated Terminal
 Plug 'kassio/neoterm'
 " Debug
@@ -66,18 +69,3 @@ endif
 let g:dracula_colorterm = 0
 colorscheme dracula
 highlight Normal guibg=none
-
-
-" coc config
-let g:coc_global_extensions = [
-			\'coc-snippets',
-			\'coc-emmet',
-		  \'coc-pairs',
-			\'coc-css',
-			\'coc-html',
-			\'coc-vetur',
-			\'coc-html-css-support',
-			\'coc-highlight',
-			\'coc-pyright',
-			\'coc-json',
-			\]
