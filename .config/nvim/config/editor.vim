@@ -162,5 +162,7 @@ let g:vimwiki_dir_link = ''
 let g:vimwiki_global_ext = 0
 " Disable folding in md url's
 let g:indentLine_setConceal = 0
+" Makes vimwiki markdown as [text](text.md) instead of [text](text)
+let g:vimwiki_markdown_link_ext = 1
 
 "let g:vimwiki_listsyms = '✗○◐●✓'
