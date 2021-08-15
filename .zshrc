@@ -3,8 +3,6 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-export PAGER="mdcat"
-
 
 ZSH_THEME="spaceship"
 
