@@ -7,6 +7,8 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="spaceship"
 
 SPACESHIP_PROMPT_ORDER=(
+	pyenv
+	venv
   user          # Username section
   dir           # Current directory section
   host          # Hostname section
@@ -19,11 +21,13 @@ SPACESHIP_PROMPT_ORDER=(
   exit_code     # Exit code section
   char          # Prompt character
 )
+
 SPACESHIP_USER_SHOW=always
 SPACESHIP_PROMPT_ADD_NEWLINE=false
 SPACESHIP_CHAR_SYMBOL="❯"
 SPACESHIP_CHAR_SUFFIX=" "
 SPACESHIP_PROMPT_SEPARATE_LINE=true
+SPACESHIP_VENV_SHOW=true
 
 
 DISABLE_UPDATE_PROMPT="true"
