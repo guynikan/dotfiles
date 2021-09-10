@@ -1,0 +1,4 @@
+customCommands:
+  - key: '<c-c>'
+    command: 'git restore . && git clean -df'
+    context: 'files'
