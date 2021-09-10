@@ -1,6 +1,9 @@
 call plug#begin() " Themes Plug 'megantiu/true.vim'
 Plug 'morhetz/gruvbox'
 Plug 'dracula/vim'
+Plug 'jacoborus/tender.vim'
+
+Plug 'sbdchd/neoformat'
 
 Plug 'ferrine/md-img-paste.vim'
 "Plug 'vim-pandoc/vim-pandoc'
@@ -67,5 +70,5 @@ if(has ("termguicolors"))
 endif
 
 let g:dracula_colorterm = 0
-colorscheme dracula
+colorscheme tender
 highlight Normal guibg=none
