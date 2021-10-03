@@ -3,10 +3,12 @@
 -- general
 lvim.format_on_save = true
 lvim.lint_on_save = true
-lvim.colorscheme = "spacegray"
+lvim.colorscheme = "onedarker"
 lvim.transparent_window = true
 
 vim.opt.relativenumber = true
+
+require'colorizer'.setup()
 
 
 -- lvim.builtin.treesitter.context_commentstring = {
@@ -37,29 +39,6 @@ lvim.builtin.which_key.mappings["t"] = {
   w = { "<cmd>Trouble lsp_workspace_diagnostics<cr>", "Diagnosticss" },
 }
 
--- lvim.builtin.which_key.mappings.s.name = "Search"
--- lvim.builtin.which_key.mappings.s.b["1"] = "<cmd>Telescope git_branches<cr>"
--- lvim.builtin.which_key.mappings.s.b["2"] = "Checkout branch"
--- lvim.builtin.which_key.mappings.s.C["1"] = "<cmd>Telescope commands<cr>"
--- lvim.builtin.which_key.mappings.s.C["2"] = "Commands"
--- lvim.builtin.which_key.mappings.s.c["1"] = "<cmd>Telescope colorscheme<cr>"
--- lvim.builtin.which_key.mappings.s.c["2"] = "Colorscheme"
--- lvim.builtin.which_key.mappings.s.f["1"] = "<cmd>Telescope find_files<cr>"
--- lvim.builtin.which_key.mappings.s.f["2"] = "Find File"
--- lvim.builtin.which_key.mappings.s.h["1"] = "<cmd>Telescope help_tags<cr>"
--- lvim.builtin.which_key.mappings.s.h["2"] = "Find Help"
--- lvim.builtin.which_key.mappings.s.k["1"] = "<cmd>Telescope keymaps<cr>"
--- lvim.builtin.which_key.mappings.s.k["2"] = "Keymaps"
--- lvim.builtin.which_key.mappings.s.M["1"] = "<cmd>Telescope man_pages<cr>"
--- lvim.builtin.which_key.mappings.s.M["2"] = "Man Pages"
--- lvim.builtin.which_key.mappings.s.p["1"] = "<cmd>lua require('telescope.builtin.internal').colorscheme({enable_preview = true})<cr>"
--- lvim.builtin.which_key.mappings.s.p["2"] = "Colorscheme with Preview"
--- lvim.builtin.which_key.mappings.s.r["1"] = "<cmd>Telescope oldfiles<cr>"
--- lvim.builtin.which_key.mappings.s.r["2"] = "Open Recent File"
--- lvim.builtin.which_key.mappings.s.R["1"] = "<cmd>Telescope registers<cr>"
--- lvim.builtin.which_key.mappings.s.R["2"] = "Registers"
--- lvim.builtin.which_key.mappings.s.t["1"] = "<cmd>Telescope live_grep<cr>"
--- lvim.builtin.which_key.mappings.s.t["2"] = "Text"
 
 lvim.builtin.which_key.mappings["w"] = {
   name = "+Windows",
@@ -127,6 +106,7 @@ lvim.lang.vue.formatters = {
 
 -- Additional Plugins
 lvim.plugins = {
+  { 'norcalli/nvim-colorizer.lua' },
   { 'ferrine/md-img-paste.vim' },
   { 'JoosepAlviste/nvim-ts-context-commentstring' },
   { 'folke/trouble.nvim' },
